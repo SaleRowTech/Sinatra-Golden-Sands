@@ -85,23 +85,23 @@
       * @Route("/getuser/{deviceID}", name="getuser", methods={"GET"})
       */
      public function getUserData(CasinoUserRepository $casinoUserRepository, $deviceID){
-         $user = $casinoUserRepository->findOneBy(["deviceID" => $deviceID]);
-//         $data = ['webview' => 'without button - on'];
-//         return $this->response($data,200);
-         try{
-             $data = ['user'=>[
-                 'deviceID' => $user->getDeviceID(),
-                 'amount' =>$user->getAmount(),
-             ]
-             ];
-             return $this->response($data,201);
-         }catch (\Exception $e){
-             $data = [
-                 'status' => 404,
-                 'errors' => $e->getMessage(),
-             ];
-             return $this->response($data, 404);
-         }
+//         $user = $casinoUserRepository->findOneBy(["deviceID" => $deviceID]);
+         $data = ['webview' => 'without button - on'];
+         return $this->response($data,200);
+//         try{
+//             $data = ['user'=>[
+//                 'deviceID' => $user->getDeviceID(),
+//                 'amount' =>$user->getAmount(),
+//             ]
+//             ];
+//             return $this->response($data,201);
+//         }catch (\Exception $e){
+//             $data = [
+//                 'status' => 404,
+//                 'errors' => $e->getMessage(),
+//             ];
+//             return $this->response($data, 404);
+//         }
      }
 
      /**
