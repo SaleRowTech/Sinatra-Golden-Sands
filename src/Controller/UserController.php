@@ -52,7 +52,7 @@
       */
      public function addUserData(Request $request, EntityManagerInterface $entityManager, CasinoUserRepository $casinoUserRepository){
          $request = $this->transformJsonBody($request);
-         if ($casinoUserRepository->findOneBy(['deviceID' => $request->get('This')])){
+         if ($casinoUserRepository->findOneBy(['deviceID' => $request->get('deviceID')])){
              $data = [
                  'status' => 421,
                  'errors' => "user exists, skipped",
@@ -60,8 +60,8 @@
              return $this->response($data, 422);
          }else{
              $casinoUser= new CasinoUser();
-             $casinoUser->setDeviceID($request->get('This'));
-             $casinoUser->setAmount($request->get('thing'));
+             $casinoUser->setDeviceID($request->get('deviceID'));
+             $casinoUser->setAmount($request->get('amount'));
              try{
                  $entityManager->persist($casinoUser);
                  $entityManager->flush();
