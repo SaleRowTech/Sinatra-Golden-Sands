@@ -4,3 +4,5 @@
 Что нужно сделать чтобы включить redirect вместо политики конфиденциальности? src/Controller/HomeController.php<br/>
 ![image](https://user-images.githubusercontent.com/66408261/142623579-d1f73fdb-e80c-4c8c-9938-7ecc5d2eb9ea.png)<br/>
 Политику вставляем в файл templates/home/index.html.twig<br/>
+
+#что нужно сделать чтобы апи работало под приложение с обфускацией (release версия)
