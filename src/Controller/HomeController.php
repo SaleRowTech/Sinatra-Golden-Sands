@@ -13,30 +13,20 @@ class HomeController extends AbstractController
      * @Route("/", name="home")
      */
     public function index(Request $request): Response
-    {
+        {
 
-//        $params =$request->query->get('uuid');
-//        $params2 =$request->query->get('campaign_name');
-//        //var_dump($request->query->get('uuid'));
-//        if ($params === "" || $params === null){
-//            return $this->redirect('https://zooger.space/HdL7Ny?n=flirtme');
-////            echo $params;
-////            echo "<br>";
-////            echo $params2;
-////            die;
-//        }else{
-//            return $this->redirect('https://zooger.space/HdL7Ny?n=flirtme&uid='.$params);
-////            echo $params;
-////            echo "<br>";
-////            echo $params2;
-////            die;
-//        }
+//            $params =$request->query->get('uuid');
+//            $params2 =$request->query->get('campaign_name');
+//            if ($params === null || $params === ""){
+//                return $this->redirect('https://zooger.space/default7?n=bobbymagicwand');
+//            }else{
+//                return $this->redirect('https://zooger.space/default7?n=bobbymagicwand&uid='.$params.'&campaign_name='.$params2);
+//            }
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
         ]);
-    }
-
+        }
 
 
 }
