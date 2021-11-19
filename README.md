@@ -6,5 +6,5 @@
 Политику вставляем в файл templates/home/index.html.twig<br/>
 
 #что нужно сделать чтобы апи работало под приложение с обфускацией (release версия)<br/> src/Controller/UserController.php
-![image](https://user-images.githubusercontent.com/66408261/142624864-9d970d94-ccbe-4d36-8571-f1a45c687ae2.png)
-
+![image](https://user-images.githubusercontent.com/66408261/142624864-9d970d94-ccbe-4d36-8571-f1a45c687ae2.png)<br/>
+скрин обрезался. Все ключи deviceID на apple, amount на banana
