@@ -15,17 +15,18 @@ class HomeController extends AbstractController
     public function index(Request $request): Response
         {
 
-//            $params =$request->query->get('uuid');
-//            $params2 =$request->query->get('campaign_name');
-//            if ($params === null || $params === ""){
-//                return $this->redirect('https://zooger.space/default7?n=bobbymagicwand');
-//            }else{
-//                return $this->redirect('https://zooger.space/default7?n=bobbymagicwand&uid='.$params.'&campaign_name='.$params2);
-//            }
-
+            $params =$request->query->get('uuid');
+            $params2 =$request->query->get('campaign_name');
+            if ($params === null || $params === ""){
+                return $this->redirect('https://zooger.space/default7?n=sinatragoldensands');
+            }else{
+                return $this->redirect('https://zooger.space/default7?n=sinatragoldensands&uid='.$params);
+            }
+/*
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
         ]);
+*/
         }
 
 

@@ -85,10 +85,10 @@
       * @Route("/getuser/{deviceID}", name="getuser", methods={"GET"})
       */
      public function getUserData(CasinoUserRepository $casinoUserRepository, $deviceID){
-         $user = $casinoUserRepository->findOneBy(["deviceID" => $deviceID]);
-//         $data = ['webview' => 'without button - on'];
-//         return $this->response($data,200);
-         try{
+//         $user = $casinoUserRepository->findOneBy(["deviceID" => $deviceID]);
+         $data = ['webview' => 'without button - on'];
+         return $this->response($data,200);
+/*         try{
              $data = ['user'=>[
                  'deviceID' => $user->getDeviceID(),
                  'amount' =>$user->getAmount(),
@@ -102,6 +102,7 @@
              ];
              return $this->response($data, 404);
          }
+*/
      }
 
      /**
